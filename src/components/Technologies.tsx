@@ -15,7 +15,6 @@ import {
   SiTypescript,
   SiJavascript,
   SiTailwindcss,
-  SiMongodb,
   SiPostgresql,
   SiFlutter,
 } from "react-icons/si";

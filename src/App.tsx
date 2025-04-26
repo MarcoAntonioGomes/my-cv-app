@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./components/Home";
 import Services from "./components/Services";
 import Technologies from "./components/Technologies";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Home />
       <Services />
       <Technologies />
+      <Footer />
     </>
   );
 }
