@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMe: React.FC = () => {
   return (
-    <section className="w-full bg-[#111111] py-24 relative">
+    <section className="w-full bg-[#111111] py-24  flex justify-center items-center">
       {/* Background Grid Effect */}
       <div className="absolute inset-0 opacity-5">
         <div className="h-full w-full grid grid-cols-6">
@@ -12,16 +12,11 @@ const AboutMe: React.FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-start gap-16 relative">
-        {/* Profile Image with hover effect */}
-        <div className="w-48 h-48 overflow-hidden group relative">
-          <div className="absolute inset-0 bg-green-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-        </div>
-
+      <div className="container mx-auto px-4 flex flex-col  items-center justify-center gap-16 relative max-w-6xl">
         {/* Content */}
-        <div className="flex-1 mt-20">
+        <div className="flex-1  ">
           {/* Description */}
-          <div className="relative">
+          <div className="relative ">
             <div className="absolute -left-4 top-0 w-0.5 h-full bg-green-400/30" />
             <p className="text-gray-400 mb-12 text-base leading-relaxed max-w-2xl pl-4">
               Hello! I'm Marco Antônio. Full Stack Developer from Brazil. I have
@@ -55,8 +50,8 @@ const AboutMe: React.FC = () => {
           </div>
 
           {/* Download CV Button with enhanced hover effect */}
-          <button className="border-2 mb-10 h-10 border-green-400 bg-transparent text-green-400  text-sm hover:bg-green-400 hover:text-black transition-all duration-300 tracking-wide">
-            <span className="m-10 ">Download CV</span>
+          <button className="border-2 h-10 border-green-400 bg-transparent text-green-400 text-sm hover:bg-green-400 hover:text-black transition-all duration-300 tracking-wide">
+            <span className="m-10">Download CV</span>
           </button>
         </div>
       </div>

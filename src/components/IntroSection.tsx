@@ -43,7 +43,7 @@ const IntroSection: React.FC = () => {
       </nav>
 
       {/* Centered headline */}
-      <div className="flex flex-1 mt-70  items-center justify-center z-10">
+      <div className="flex flex-1 mt-64  items-center justify-center z-10">
         <h1 className="text-5xl md:text-7xl font-bold text-center">
           I'm a Full Stack{" "}
           <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
