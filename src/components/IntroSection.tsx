@@ -1,29 +1,26 @@
-import myPhoto from "../assets/my-photo.jpg";
+import myPhoto from "../assets/my-photo.png";
+import profileBg from "../assets/profile_bg.png";
 import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const IntroSection: React.FC = () => {
   return (
-    <section className="relative w-full h-screen flex flex-col justify-between overflow-hidden text-white">
+    <section className="relative w-full h-[700px] flex flex-col justify-between overflow-hidden text-white">
       {/* Background */}
-      <img
-        src={myPhoto}
-        alt="Background"
-        className="absolute inset-0 w-full h-full object-cover z-[-2]"
-      />
-      <div className="absolute inset-0 bg-black/80 z-[-1]" />
-
-      {/* Vertical grid lines (optional, for effect) */}
-      <div className="absolute inset-0 flex z-0 pointer-events-none">
-        <div className="flex-1 border-l border-white/10" />
-        <div className="flex-1 border-l border-white/10" />
-        <div className="flex-1 border-l border-white/10" />
-        <div className="flex-1 border-l border-white/10" />
+      <div className="absolute inset-0 z-[-2] flex items-center justify-center">
+        <img
+          src={profileBg}
+          alt="Background Pattern"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="relative h-full w-full max-w-2xl flex items-center">
+          <img src={myPhoto} alt="Background" className="w-full h-full " />
+        </div>
       </div>
 
       {/* Top left name */}
       <div className="absolute top-6 left-8 z-10">
-        <span className="text-gray-300 font-light">Alejandro</span>
-        <span className="font-bold ml-1">Abeyta</span>
+        <span className="text-gray-300 font-light">Marco</span>
+        <span className="font-bold ml-1">Antônio</span>
       </div>
 
       {/* Top right navigation */}
@@ -46,11 +43,11 @@ const IntroSection: React.FC = () => {
       </nav>
 
       {/* Centered headline */}
-      <div className="flex flex-1 items-center justify-center z-10">
+      <div className="flex flex-1 mt-70  items-center justify-center z-10">
         <h1 className="text-5xl md:text-7xl font-bold text-center">
-          I develop{" "}
+          I'm a Full Stack{" "}
           <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-            mobile apps
+            Developer
           </span>
         </h1>
       </div>
@@ -58,49 +55,56 @@ const IntroSection: React.FC = () => {
       {/* Bottom left contact and intro */}
       <div className="absolute bottom-10 left-8 z-10 flex flex-col gap-4">
         <div className="text-gray-300 text-sm">
-          <div>E: alejandroa@gmail.com</div>
-          <div>T: +1 (234) 567 80 98</div>
+          <div>E: marcoant.gomes07@gmail.com</div>
+          <div>T: +55 (37) 99928-0550</div>
         </div>
         <div className="text-white text-base">
           <span>
             Hello, I'm{" "}
-            <span className="text-green-400 font-bold">Alejandro Abeyta</span>,
-            UX/UI Designer and
+            <span className="text-green-400 font-bold">Marco Antônio</span>,
+            Full Stack Developer
           </span>
           <br />
-          <span>Front-end Developer Based in San Francisco.</span>
+          <span>Based in Brazil.</span>
         </div>
       </div>
 
       {/* Right vertical social links and label */}
-      <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-6 z-10">
-        <span className="text-xs text-gray-300 mb-4 rotate-90 origin-left">
-          Follow Me
-        </span>
-        <div className="flex flex-col gap-4">
+      <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 z-10">
+        <div className="flex flex-col items-center">
+          <span className="text-xs ml-8 mb-10 text-gray-300 rotate-90 origin-left translate-x-3 translate-y-8 whitespace-nowrap">
+            Follow Me
+          </span>
+          <div className="w-[1px] h-16 bg-gray-300 mt-16"></div>
+        </div>
+        <div className="flex flex-col items-center gap-6">
           <a
-            href="#linkedin"
+            href="https://linkedin.com"
+            target="_blank"
             aria-label="LinkedIn"
             className="hover:text-green-400 transition-colors text-lg"
           >
             <FaLinkedin />
           </a>
           <a
-            href="#github"
+            href="https://github.com"
+            target="_blank"
             aria-label="GitHub"
             className="hover:text-green-400 transition-colors text-lg"
           >
             <FaGithub />
           </a>
           <a
-            href="#facebook"
+            href="https://facebook.com"
+            target="_blank"
             aria-label="Facebook"
             className="hover:text-green-400 transition-colors text-lg"
           >
             <FaFacebook />
           </a>
           <a
-            href="#instagram"
+            href="https://instagram.com"
+            target="_blank"
             aria-label="Instagram"
             className="hover:text-green-400 transition-colors text-lg"
           >
