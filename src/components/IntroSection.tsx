@@ -1,10 +1,20 @@
 import myPhoto from "../assets/my-photo.png";
 import profileBg from "../assets/profile_bg.png";
-import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 const IntroSection: React.FC = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="relative w-full h-[700px] flex flex-col justify-between overflow-hidden text-white">
+    <section
+      id="home"
+      className="relative w-full h-[700px] flex flex-col justify-between overflow-hidden text-white"
+    >
       {/* Background */}
       <div className="absolute inset-0 z-[-2] flex items-center justify-center">
         <img
@@ -25,21 +35,36 @@ const IntroSection: React.FC = () => {
 
       {/* Top right navigation */}
       <nav className="absolute top-6 right-12 flex gap-8 z-10 text-gray-300 text-base font-medium">
-        <a href="#home" className="hover:text-white transition-colors">
+        <button
+          onClick={() => scrollToSection("home")}
+          className="hover:text-white transition-colors"
+        >
           Home
-        </a>
-        <a href="#resume" className="hover:text-white transition-colors">
-          Resume
-        </a>
-        <a href="#works" className="hover:text-white transition-colors">
+        </button>
+        <button
+          onClick={() => scrollToSection("services")}
+          className="hover:text-white transition-colors"
+        >
+          Services
+        </button>
+        <button
+          onClick={() => scrollToSection("technologies")}
+          className="hover:text-white transition-colors"
+        >
+          Technologies
+        </button>
+        <button
+          onClick={() => scrollToSection("works")}
+          className="hover:text-white transition-colors"
+        >
           Works
-        </a>
-        <a href="#blog" className="hover:text-white transition-colors">
-          Blog
-        </a>
-        <a href="#contacts" className="hover:text-white transition-colors">
-          Contacts
-        </a>
+        </button>
+        <button
+          onClick={() => scrollToSection("contact")}
+          className="hover:text-white transition-colors"
+        >
+          Contact
+        </button>
       </nav>
 
       {/* Centered headline */}
@@ -94,14 +119,7 @@ const IntroSection: React.FC = () => {
           >
             <FaGithub />
           </a>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            aria-label="Facebook"
-            className="hover:text-green-400 transition-colors text-lg"
-          >
-            <FaFacebook />
-          </a>
+
           <a
             href="https://instagram.com"
             target="_blank"

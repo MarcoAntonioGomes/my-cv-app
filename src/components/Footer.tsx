@@ -5,12 +5,12 @@ import {
   FaMapMarkerAlt,
   FaGithub,
   FaLinkedin,
-  FaTwitter,
+  FaInstagram,
 } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-[#111111] py-16 border-t border-gray-800">
+    <footer id="contact" className="w-full bg-[#1a1a1a] py-12">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Contact Information */}
@@ -63,12 +63,12 @@ const Footer: React.FC = () => {
                 <FaLinkedin className="text-2xl" />
               </a>
               <a
-                href="https://twitter.com/yourusername"
+                href="https://instagram.com/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-green-400 transition-colors duration-300"
               >
-                <FaTwitter className="text-2xl" />
+                <FaInstagram className="text-2xl" />
               </a>
             </div>
           </div>

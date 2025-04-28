@@ -52,12 +52,12 @@ const Technologies: React.FC = () => {
     {
       icon: <SiTypescript />,
       name: "TypeScript",
-      experience: "2 years",
+      experience: "4 years",
     },
     {
       icon: <SiJavascript />,
       name: "JavaScript",
-      experience: "5 years",
+      experience: "6 years",
     },
     {
       icon: <FaJava />,
@@ -65,14 +65,9 @@ const Technologies: React.FC = () => {
       experience: "5 years",
     },
     {
-      icon: <SiFlutter />,
-      name: "Flutter",
-      experience: "1 year",
-    },
-    {
       icon: <FaNodeJs />,
       name: "Node.js",
-      experience: "5 years",
+      experience: "4 years",
     },
     {
       icon: <SiTailwindcss />,
@@ -80,53 +75,59 @@ const Technologies: React.FC = () => {
       experience: "2 years",
     },
     {
-      icon: <FaDocker />,
-      name: "Docker",
-      experience: "3 year",
+      icon: <FaHtml5 />,
+      name: "HTML5",
+      experience: "7 years",
     },
     {
-      icon: <FaGitAlt />,
-      name: "Git",
-      experience: "5 years",
-    },
-    {
-      icon: <FaDatabase />,
-      name: "SQL",
-      experience: "5 years",
+      icon: <FaCss3Alt />,
+      name: "CSS3",
+      experience: "7 years",
     },
     {
       icon: <SiPostgresql />,
       name: "PostgreSQL",
-      experience: "3 year",
+      experience: "4 years",
+    },
+    {
+      icon: <FaDatabase />,
+      name: "MySQL",
+      experience: "5 years",
+    },
+    {
+      icon: <FaDocker />,
+      name: "Docker",
+      experience: "3 years",
+    },
+    {
+      icon: <FaGitAlt />,
+      name: "Git",
+      experience: "6 years",
     },
     {
       icon: <FaAws />,
       name: "AWS",
-      experience: "3 year",
+      experience: "3 years",
     },
     {
-      icon: <FaHtml5 />,
-      name: "HTML",
-      experience: "5 year",
-    },
-    {
-      icon: <FaCss3Alt />,
-      name: "CSS",
-      experience: "5 year",
+      icon: <SiFlutter />,
+      name: "Flutter",
+      experience: "2 years",
     },
   ];
 
   return (
-    <section className="w-full bg-[#111111] py-24">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section
+      id="technologies"
+      className="w-full bg-[#1a1a1a] py-24 border-b border-gray-800"
+    >
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Technologies Experience
-          </h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Technologies</h2>
           <div className="w-20 h-1 bg-green-400 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {technologies.map((tech, index) => (
             <TechCard
               key={index}

@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMe: React.FC = () => {
   return (
-    <section className="w-full bg-[#111111] py-24  flex justify-center items-center">
+    <section className="w-full bg-[#111111] py-16 flex justify-center items-center">
       {/* Background Grid Effect */}
       <div className="absolute inset-0 opacity-5">
         <div className="h-full w-full grid grid-cols-6">

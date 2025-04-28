@@ -50,8 +50,8 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-[#111111] pt-5 pb-10">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section id="services" className="w-full bg-[#111111] py-16">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">My Services</h2>
           <div className="w-20 h-1 bg-green-400 mx-auto"></div>
