@@ -11,16 +11,10 @@ interface Project {
 const Works: React.FC = () => {
   const projects: Project[] = [
     {
-      title: "Liberty Fitness Web and Administrative Platform",
-      year: "2019-2020",
+      title: "Sicoob – Banking Solutions Modernization and Process Automation",
+      year: "2020-2025",
       description:
-        "At Find Soluções Corporativas, I contributed to the development of the Liberty Fitness system, working on both the front-end and back-end. On the front-end, I developed web application screens using Angular, HTML, CSS, JavaScript, Bootstrap, and TypeScript. On the back-end, I built REST APIs with Spring Boot, implementing business rules and user management functionalities. Additionally, I developed cloud file upload functionality using AWS S3, enabling scalable storage for user documents and data. My work supported the creation of management panels for gym owners and system administrators, allowing the registration of gyms, users, plans, and access to system usage statistics.",
-    },
-    {
-      title: "Integrated Smart Cities Management Platform – IPGC",
-      year: "2020-2021",
-      description:
-        "At the Institute of Planning and Management of Cities (IPGC), I was responsible for developing the back-end of the main API, creating microservices and REST endpoints for the CRM and Projects modules. I implemented CI/CD pipelines using Jenkins, set up API documentation with Swagger, and managed file storage using AWS S3. I also developed a microservice for document conversion between different formats (DOCX, PDF, and HTML) and implemented document rendering and automation processes for corporate use. Additionally, I programmed business logic and data processing routines aimed at smart city projects, focusing on public lighting efficiency, telecommunications infrastructure deployment, and solar power plant development.",
+        "At Sicoob, I worked as a Senior Full Stack Developer, leading and implementing several strategic initiatives for banking systems modernization and process automation. I developed banking transactions using Java EE (EJB), created and maintained REST APIs, and built user interfaces with Angular (using the Redux pattern) and Flutter for the Super App Sicoob. I was responsible for developing and maintaining batch processing flows, integrating messaging solutions with JMS, and writing unit tests with JUnit, Jasmine, and Karma. Among the key deliveries, I developed a Monitoring Panel for INSS File Processing, optimized business reporting for credit unions, and participated in the integration of the BPS (Social Security Benefits) system with SSPB to automate TED payments to BACEN. I led the migration of Java projects from Docker to Kubernetes clusters, ensuring system scalability and robustness, and automated processes for managing unpaid INSS benefits. Additionally, I worked on the modernization of legacy systems, migrating critical routines from VB to Java, and contributed to the implementation of an ATM Token system that validates user transactions through their registered cellphone number, enhancing the security and authentication process across ATM networks.",
     },
     {
       title: "Joinder – Astrological Relationship Matching Platform",
@@ -29,12 +23,26 @@ const Works: React.FC = () => {
         "At Joinder, I was responsible for developing the entire back-end of a relationship application similar to Tinder, but focused on astrological compatibility. I designed and implemented the system's back-end using Spring Boot and Spring Cloud to deliver a scalable microservices architecture. In addition to the back-end development, I managed the cloud infrastructure on AWS, configuring and maintaining services such as EC2 for server hosting, RDS for relational database management, Redis for caching, and S3 for cloud file storage. My work ensured high availability, scalability, and performance for the application, supporting a seamless user matching experience based on astrological profiles.",
     },
     {
-      title: "Sicoob – Banking Solutions Modernization and Process Automation",
-      year: "2020-2023",
+      title: "Integrated Smart Cities Management Platform – IPGC",
+      year: "2020-2021",
       description:
-        "At Sicoob, I worked as a Senior Full Stack Developer, leading and implementing several strategic initiatives for banking systems modernization and process automation. I developed banking transactions using Java EE (EJB), created and maintained REST APIs, and built user interfaces with Angular (using the Redux pattern) and Flutter for the Super App Sicoob. I was responsible for developing and maintaining batch processing flows, integrating messaging solutions with JMS, and writing unit tests with JUnit, Jasmine, and Karma. Among the key deliveries, I developed a Monitoring Panel for INSS File Processing, optimized business reporting for credit unions, and participated in the integration of the BPS (Social Security Benefits) system with SSPB to automate TED payments to BACEN. I led the migration of Java projects from Docker to Kubernetes clusters, ensuring system scalability and robustness, and automated processes for managing unpaid INSS benefits. Additionally, I worked on the modernization of legacy systems, migrating critical routines from VB to Java, and contributed to the implementation of an ATM Token system that validates user transactions through their registered cellphone number, enhancing the security and authentication process across ATM networks.",
+        "At the Institute of Planning and Management of Cities (IPGC), I was responsible for developing the back-end of the main API, creating microservices and REST endpoints for the CRM and Projects modules. I implemented CI/CD pipelines using Jenkins, set up API documentation with Swagger, and managed file storage using AWS S3. I also developed a microservice for document conversion between different formats (DOCX, PDF, and HTML) and implemented document rendering and automation processes for corporate use. Additionally, I programmed business logic and data processing routines aimed at smart city projects, focusing on public lighting efficiency, telecommunications infrastructure deployment, and solar power plant development.",
+    },
+    {
+      title: "Liberty Fitness Web and Administrative Platform",
+      year: "2019-2020",
+      description:
+        "At Find Soluções Corporativas, I contributed to the development of the Liberty Fitness system, working on both the front-end and back-end. On the front-end, I developed web application screens using Angular, HTML, CSS, JavaScript, Bootstrap, and TypeScript. On the back-end, I built REST APIs with Spring Boot, implementing business rules and user management functionalities. Additionally, I developed cloud file upload functionality using AWS S3, enabling scalable storage for user documents and data. My work supported the creation of management panels for gym owners and system administrators, allowing the registration of gyms, users, plans, and access to system usage statistics.",
     },
   ];
+
+  // Sort projects by year in descending order (most recent first)
+  const sortedProjects = [...projects].sort((a, b) => {
+    // Extract the end year from the year range (e.g., "2020-2023" -> 2023)
+    const yearA = parseInt(a.year.split("-")[1]);
+    const yearB = parseInt(b.year.split("-")[1]);
+    return yearB - yearA;
+  });
 
   return (
     <section
@@ -59,7 +67,7 @@ const Works: React.FC = () => {
 
         {/* Projects List */}
         <div className="flex flex-col gap-8 max-w-3xl mx-auto">
-          {projects.map((project, index) => (
+          {sortedProjects.map((project, index) => (
             <WorkItem
               key={index}
               title={project.title}

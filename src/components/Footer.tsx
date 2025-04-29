@@ -35,10 +35,11 @@ const Footer: React.FC = () => {
           {/* About */}
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-white text-xl font-semibold mb-6">About</h3>
-            <p className="text-gray-400 text-center md:text-left">
+            <p className="text-gray-400 text-justify ">
               I'm a Full Stack Developer with a passion for creating modern web
-              applications. I specialize in React, TypeScript, and Node.js
-              development.
+              or mobile applications. With 5 years of experience, I have a
+              strong foundation in Java, Spring Boot, Angular, React and
+              Flutter.
             </p>
           </div>
 
@@ -47,7 +48,7 @@ const Footer: React.FC = () => {
             <h3 className="text-white text-xl font-semibold mb-6">Follow Me</h3>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/MarcoAntonioGomes"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-green-400 transition-colors duration-300"
@@ -55,7 +56,7 @@ const Footer: React.FC = () => {
                 <FaGithub className="text-2xl" />
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/marco-ant%C3%B4nio-gomes-098031149/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-green-400 transition-colors duration-300"
@@ -63,7 +64,7 @@ const Footer: React.FC = () => {
                 <FaLinkedin className="text-2xl" />
               </a>
               <a
-                href="https://instagram.com/yourusername"
+                href="https://www.instagram.com/m4rc0g0ms?igsh=czZuZDkyMHFpenhh&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-green-400 transition-colors duration-300"

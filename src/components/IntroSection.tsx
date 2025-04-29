@@ -104,7 +104,7 @@ const IntroSection: React.FC = () => {
         </div>
         <div className="flex flex-col items-center gap-6">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/marco-ant%C3%B4nio-gomes-098031149/"
             target="_blank"
             aria-label="LinkedIn"
             className="hover:text-green-400 transition-colors text-lg"
@@ -112,7 +112,7 @@ const IntroSection: React.FC = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/MarcoAntonioGomes"
             target="_blank"
             aria-label="GitHub"
             className="hover:text-green-400 transition-colors text-lg"
@@ -121,7 +121,7 @@ const IntroSection: React.FC = () => {
           </a>
 
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/m4rc0g0ms?igsh=czZuZDkyMHFpenhh&utm_source=qr"
             target="_blank"
             aria-label="Instagram"
             className="hover:text-green-400 transition-colors text-lg"

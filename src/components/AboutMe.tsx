@@ -1,6 +1,17 @@
 import React from "react";
+import cvFile from "../assets/cv.pdf";
 
 const AboutMe: React.FC = () => {
+  const handleDownloadCV = () => {
+    // Create a link element
+    const link = document.createElement("a");
+    link.href = cvFile;
+    link.download = "Marco_Antonio_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="w-full bg-[#111111] py-16 flex justify-center items-center">
       {/* Background Grid Effect */}
@@ -18,17 +29,20 @@ const AboutMe: React.FC = () => {
           {/* Description */}
           <div className="relative ">
             <div className="absolute -left-4 top-0 w-0.5 h-full bg-green-400/30" />
-            <p className="text-gray-400 mb-12 text-base leading-relaxed max-w-2xl pl-4">
-              Hello! I'm Marco Antônio. Full Stack Developer from Brazil. I have
-              rich experience in web development, also I am good at TypeScript.
-              I love to talk about our unique.
+            <p className="text-gray-400 text-justify mb-12 text-base leading-relaxed max-w-2xl pl-4">
+              I am a Full Stack Software Developer with over 5 years of
+              experience, specialized in Java, Spring Boot, Angular, and
+              Flutter. I hold a degree in Computer Engineering and a Master's in
+              Software Engineering with Java focus. Skilled in backend,
+              frontend, and cloud development using AWS, Kubernetes, and Docker,
+              I build scalable, secure, and high-performance applications.
             </p>
           </div>
 
           {/* Info Grid with hover effects */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-16 mb-12">
             {[
-              { label: "Age", value: "24" },
+              { label: "Age", value: "30" },
               { label: "Residence", value: "Brazil" },
               { label: "Freelance", value: "Available" },
               { label: "Address", value: "Belo Horizonte, MG" },
@@ -50,7 +64,10 @@ const AboutMe: React.FC = () => {
           </div>
 
           {/* Download CV Button with enhanced hover effect */}
-          <button className="border-2 h-10 border-green-400 bg-transparent text-green-400 text-sm hover:bg-green-400 hover:text-black transition-all duration-300 tracking-wide">
+          <button
+            onClick={handleDownloadCV}
+            className="border-2 h-10 border-green-400 bg-transparent text-green-400 text-sm hover:bg-green-400 hover:text-black transition-all duration-300 tracking-wide"
+          >
             <span className="m-10">Download CV</span>
           </button>
         </div>
