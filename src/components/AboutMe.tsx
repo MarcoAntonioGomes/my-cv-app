@@ -31,7 +31,7 @@ const AboutMe: React.FC = () => {
             <div className="absolute -left-4 top-0 w-0.5 h-full bg-green-400/30" />
             <p className="text-gray-400 text-justify mb-12 text-base leading-relaxed max-w-2xl pl-4">
               I am a Full Stack Software Developer with over 5 years of
-              experience, specialized in Java, Spring Boot, Angular, and
+              experience, specialized in Java, Spring Boot, Angular, React and
               Flutter. I hold a degree in Computer Engineering and a Master's in
               Software Engineering with Java focus. Skilled in backend,
               frontend, and cloud development using AWS, Kubernetes, and Docker,
@@ -40,7 +40,7 @@ const AboutMe: React.FC = () => {
           </div>
 
           {/* Info Grid with hover effects */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-16 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-16 mb-12 w-full">
             {[
               { label: "Age", value: "30" },
               { label: "Residence", value: "Brazil" },
@@ -51,12 +51,12 @@ const AboutMe: React.FC = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex items-center group cursor-default"
+                className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left group cursor-default"
               >
-                <span className="text-green-400 w-24 font-medium">
+                <span className="text-green-400 md:w-24 font-medium mb-1 md:mb-0">
                   {item.label}:
                 </span>
-                <span className="text-gray-300 group-hover:text-white transition-colors duration-300">
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300 md:ml-2">
                   {item.value}
                 </span>
               </div>
@@ -64,12 +64,14 @@ const AboutMe: React.FC = () => {
           </div>
 
           {/* Download CV Button with enhanced hover effect */}
-          <button
-            onClick={handleDownloadCV}
-            className="border-2 h-10 border-green-400 bg-transparent text-green-400 text-sm hover:bg-green-400 hover:text-black transition-all duration-300 tracking-wide"
-          >
-            <span className="m-10">Download CV</span>
-          </button>
+          <div className="flex justify-center w-full">
+            <button
+              onClick={handleDownloadCV}
+              className="border-2 h-10 border-green-400 bg-transparent text-green-400 text-sm hover:bg-green-400 hover:text-black transition-all duration-300 tracking-wide px-8"
+            >
+              <span>Download CV</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
