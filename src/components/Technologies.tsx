@@ -42,7 +42,7 @@ const Technologies: React.FC = () => {
     {
       icon: <FaReact />,
       name: "React",
-      experience: "3 years",
+      experience: "1 year",
     },
     {
       icon: <FaAngular />,
